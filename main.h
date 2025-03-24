@@ -4,6 +4,7 @@
 int _putchar(char c);
 int _strlen_recursion(char *s);
 int _printf(const char *format, ...);
+<<<<<<< HEAD
 void print_numbers(void);
 void print_most_numbers(void);
 void print_line(int n);
@@ -27,5 +28,13 @@ void print_dog(struct dog *d);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
+=======
+void print_numbers(const char *separator, const unsigned int n, ...);
+void print_strings(const char *separator, const unsigned int n, ...);
+void print_all(const char * const format, ...);
+void print_dog(struct dog *d);
+void print_chessboard(char (*a)[8]);
+void print_diagsums(int *a, int size);
+>>>>>>> 40902f1 (Ajout prototypes main.h)
 
 #endif
