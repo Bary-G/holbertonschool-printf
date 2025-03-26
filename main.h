@@ -33,5 +33,6 @@ void print_all(const char * const format, ...);
 void print_dog(struct dog *d);
 void print_chessboard(char (*a)[8]);
 void print_diagsums(int *a, int size);
+int (*get_op_func(char *s))(int, int);
 
 #endif
