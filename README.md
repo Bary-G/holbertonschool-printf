@@ -19,7 +19,7 @@ AUTHORS - Bary, Murphy
 ---
 title: _printf
 ---
-flowchart
+```flowchart
 	id0((_printf))
 	id0 --> id1[/while string array is not NULL/]
 	id1 --> id2{{character % ?}}
@@ -51,3 +51,4 @@ flowchart
 	id201 --> id202[_putchar number]
 	id202 --> id100
 	id202 -- Recursion --> id200
+```
