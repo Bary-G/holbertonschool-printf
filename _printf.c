@@ -46,6 +46,17 @@ int _printf(const char *format, ...)
 				count += print_number_rec(integer);
 				count++;
 			}
+			else if (format[i] == 'i')
+			{
+				int integer = va_arg(args, int);
+				if (integer < 0)
+				{
+					count += _putchar('-');
+					integer = -integer;
+				}
+				count += print_number_rec(integer);
+				count++;
+			}
 			else if (format[i] == 's')
 			{
 				char* str = va_arg(args, char*);
@@ -56,10 +67,36 @@ int _printf(const char *format, ...)
 					j++;
 				}
 			}
+			else if (format[i] == 'u')
+			{
+				print_number_base(va_arg(args, unsigned int), 10, 0);
+			}
+			else if (format[i] == 'o')
+			{
+				print_number_base(va_arg(args, unsigned int), 8, 0);
+			}
+			else if (format[i] == 'x')
+			{
+				print_number_base(va_arg(args, unsigned int), 16, 0);
+			}
+			else if (format[i] == 'X')
+			{
+				print_number_base(va_arg(args, unsigned int), 16, 0);
+			}
+			else if (format[i] == 'p')
+			{
+				write(1, "0x", 2);
+				print_number_base(va_arg(args, unsigned long), 16, 0);
+			}
 			else if (format[i] == '%')
 			{
 				_putchar('%');
 				count++;
+			}
+			else
+			{
+				_putchar('%');
+				_putchar(format[i]);
 			}
 			i++;
 		}
