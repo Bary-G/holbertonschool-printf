@@ -81,7 +81,7 @@ int _printf(const char *format, ...)
 			}
 			else if (format[i] == 'X')
 			{
-				print_number_base(va_arg(args, unsigned int), 16, 0);
+				print_number_base(va_arg(args, unsigned int), 16, 1);
 			}
 			else if (format[i] == 'p')
 			{
