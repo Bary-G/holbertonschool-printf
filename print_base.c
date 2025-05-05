@@ -1,6 +1,13 @@
 #include "main.h"
 #include <unistd.h>
 
+/**
+  * print_number_base - convert number into another base
+  * @num: number
+  * @base: base
+  * @uppercase: verify if uppercase or not
+  * Return: converted number
+  */
 void print_number_base(unsigned long num, int base, int uppercase)
 {
 	char *digits = uppercase ? "0123456789ABCDEF" : "0123456789abcdef";

@@ -2,7 +2,7 @@
 
 /**
   * print_number_rec - recursive function, prints all digits of an int as char
-  * @number: int, number to print passed to function
+  * @integer: int, number to print passed to function
   * Return: number of char printed
   */
 int print_number_rec(unsigned int integer)

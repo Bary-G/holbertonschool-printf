@@ -60,7 +60,7 @@ int _printf(const char *format, ...)
 			else if (format[i] == 's')
 			{
 				char* str = va_arg(args, char*);
-				while(str[j] != '\0')
+				while (str[j] != '\0')
 				{
 					_putchar(str[j]);
 					count++;
